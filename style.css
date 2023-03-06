@@ -1,0 +1,246 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background-image: url("./background.jpg");
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2% 5%;
+    color: white;
+
+}
+main{
+    height: fit-content;
+}
+.nav-bar ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+.nav-bar ul li, #login-link{
+    margin-inline: 1.8em;
+    font-size: 1.05em;
+    cursor: pointer;
+}
+
+.nav-bar ul li:hover{
+    border-bottom: 2px solid white;
+
+}
+.hamburguer{
+    display: none;
+}
+#login-link{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: transparent;
+    color: white;
+    border: none;
+    border: 1px solid white;
+    padding: 8px 20px;
+    border-radius: 8px;
+}
+
+.login{
+    width: 420px;
+    height: 430px;
+    background-color: transparent;
+    margin: 0 auto;
+    margin-block: 50px;
+    backdrop-filter: blur(8px);
+    border: 1px solid white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem;
+    
+}
+.login h2{
+    text-align:center;
+    font-size: 2em;
+    font-weight: bolder;
+    margin-bottom: 2rem;
+}
+.password, .email{
+    display: grid;
+    grid-template-columns: 10fr 0fr;
+    align-items: center;
+    
+    
+   
+    
+}
+ion-icon{
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+    border-bottom: 2px solid black;
+    width: 50px;
+
+    
+}
+input[type="password"], input[type="email"]{
+    padding-block: 1rem;
+    margin-bottom: 1.3rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid black;
+  
+}
+::placeholder{
+    color: rgb(39, 44, 44);
+    font-size: 1em;
+    background-color: transparent;
+}
+
+.rem-pass{
+    display: grid;
+    grid-template-columns: 0.3fr 2fr 3fr;
+    align-items: center;
+    margin-bottom: 1rem ;
+    
+    
+}
+ .login a{
+    text-decoration: none;
+    color: rgb(31, 37, 37);
+}
+#forgot-pass{
+    text-align: right;
+    font-weight: bold;
+}
+input[type="submit"]{
+    padding-block: 1rem;
+    background-color: rgb(31, 37, 37);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 1.5rem;
+    font-size: 1em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor: pointer;
+} 
+
+#end-text{
+    text-align: center
+}
+span{
+    font-weight: bold;
+}
+@media only screen and (max-width:900px){
+    header{
+        margin: 2% 3%;
+    }
+    .links ul li, #login-link{
+        margin-inline: 1.3em;
+    }
+}
+@media only screen and (max-width:700px){
+    header{
+        margin: 2% 3%;
+
+    }
+    .nav-bar ul li, #login-link{
+        margin-inline: 1em;
+    }
+
+}
+@media only screen and (max-width:580px){
+    
+    .hamburguer{
+        display: block;
+        cursor: pointer;
+
+    }
+    .hamburguer .line{
+        width: 26px;
+        height: 3px;
+        background-color: #fff;
+        margin: 6px 0;
+    }
+    .nav-bar{
+        position:absolute;
+        top: 50px;
+        width: 100vw;
+        height: 0px;
+        backdrop-filter: blur(8px);
+        left: 0;
+        overflow: hidden;
+        transition: 0.5s;
+
+         
+    }
+    .nav-bar.active{
+        height: 300px;
+
+    }
+    .nav-bar.active ul {
+        opacity: 1;
+        transition: 0.5s
+    }
+    .nav-bar ul{
+        display: block;
+        transition: 0.5s;
+        text-align: center;
+        opacity: 0;
+    }
+    .nav-bar ul li{
+        margin: 15px;
+        color:#fff;
+        margin-block: 1.8rem;
+    }
+    .nav-bar ul li:hover{
+        border-bottom: none;
+        
+    }
+    .nav-bar ul li a:hover{
+        background-color: #fff;
+        color: rgb(31, 37, 37);
+        padding: 10px;
+        border-radius: 8px
+    }
+    .login.not-active{
+        display: none;
+        transition: 0.5s;
+    }
+}
+@media screen and (max-width:450px){
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    header{
+        height: 60px;
+        margin-inline: 5%;
+    }
+    .nav-bar{
+        top: 60px;
+    }
+    .login{
+        width: 95%;
+        padding-inline: 2rem;
+    }
+}
+@media screen and (max-width:350px){
+    .login{
+        padding: 1.3rem;
+    }
+    .rem-pass, .rem-pass a{
+        text-align: center
+    }
+}
+    
+   
